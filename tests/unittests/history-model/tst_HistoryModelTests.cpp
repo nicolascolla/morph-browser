@@ -271,7 +271,6 @@ private Q_SLOTS:
         delete model;
         model = new HistoryModel;
         model->setDatabasePath(fileName);
-        QTest::qWait(200);
         QTRY_COMPARE(model->rowCount(), 2);
         QCOMPARE(model->data(model->index(0, 0), HistoryModel::Url).toUrl(), QUrl("http://example.com/"));
         QCOMPARE(model->data(model->index(0, 0), HistoryModel::Hidden).toBool(), true);
