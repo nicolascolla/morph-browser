@@ -56,9 +56,8 @@ WebProcessMonitor {
             webviewMock.renderProcessTerminated(WebEngineView.KilledTerminationStatus)
             verify(monitor.killed)
             verify(!monitor.crashed)
-            wait(200)
-            compare(monitor.killedRetries, 1)
-            compare(webviewMock.reloadCalled, 1)
+            tryCompare(monitor, "killedRetries", 1)
+            tryCompare(webviewMock, "reloadCalled", 1)
             
             webviewMock.loadingChanged({status: WebEngineLoadRequest.LoadFailedStatus})
             verify(!monitor.killed)
