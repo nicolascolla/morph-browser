@@ -189,17 +189,17 @@ ChromeController {
             var data = []
             var forceHideValues = [false, true];
             var forceShowValues = [false, true];
-            var initialḾodeValues = [modeAuto, modeHidden, modeShown];
-            var defaultḾodeValues = [modeAuto, modeHidden, modeShown];
+            var initialModeValues = [modeAuto, modeHidden, modeShown];
+            var defaultModeValues = [modeAuto, modeHidden, modeShown];
             var isFullScreenValues = [false, true];
 
             for (var i in forceHideValues) {
                 for (var j in forceShowValues) {
-                    for (var k in initialḾodeValues) {
-                        for (var l in defaultḾodeValues) {
+                    for (var k in initialModeValues) {
+                        for (var l in defaultModeValues) {
                             for (var m in isFullScreenValues) {
-                                data.push({forceHide: forceHideValues[i], forceShow: forceShowValues[j], initialMode: initialḾodeValues[k], 
-                                           defaultMode: defaultḾodeValues[l], isFullScreen: isFullScreenValues[m]});
+                                data.push({forceHide: forceHideValues[i], forceShow: forceShowValues[j], initialMode: initialModeValues[k], 
+                                           defaultMode: defaultModeValues[l], isFullScreen: isFullScreenValues[m]});
                             }
                         }
                     }
@@ -222,8 +222,6 @@ ChromeController {
 
             function test_sequence(sequence, modes) {
                  for (var i in sequence) {
-                    
-                    console.log("data: " + JSON.stringify(data))
                     var previousMode = webviewMock.locationBarController.mode;
                     showSpy.clear();
                     webviewMock.loadingChanged({status: sequence[i]});

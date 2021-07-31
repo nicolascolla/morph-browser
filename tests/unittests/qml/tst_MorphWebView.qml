@@ -91,37 +91,5 @@ Item {
             mouseClick(webview, center.x, center.y)
             verify(waitFor(function() { return getContextMenu() == null }))
         }
-
-        /*
-        function test_no_contextual_actions() {
-            loadHtmlWithHyperlink()
-            rightClickWebview()
-            wait(500)
-            compare(waitFor(getContextMenu), null)
-        }
-
-        function test_contextual_actions() {
-            webview.contextualActions = actionList
-            loadHtmlWithHyperlink()
-            rightClickWebview()
-            verify(waitFor(getContextMenu) != null)
-            compare(getContextMenu().actions.children, actionList.children)
-            compare(webview.contextualData.href, "http://example.org/")
-            dismissContextMenu()
-            compare(webview.contextualData.href, "")
-        }
-
-        function test_contextual_actions_all_disabled() {
-            webview.contextualActions = actionList
-            action1.enabled = false
-            action2.enabled = false
-            loadHtmlWithHyperlink()
-            rightClickWebview()
-            waitFor(getContextMenu)
-            verify(waitFor(function() { return getContextMenu() == null }))
-            action1.enabled = true
-            action2.enabled = true
-        }
-        */
     }
 }
