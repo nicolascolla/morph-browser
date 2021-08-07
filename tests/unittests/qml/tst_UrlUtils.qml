@@ -17,27 +17,10 @@
  */
 
 import QtTest 1.0
-import "../../../src/app/UrlUtils.js" as UrlUtils
+import webbrowsercommon.private 0.1 
 
 TestCase {
     name: "UrlUtils"
-
-    function test_extractAuthority_data() {
-        return [
-            {url: "", authority: ""},
-            {url: "http://example.org/", authority: "example.org"},
-            {url: "http://www.example.org/", authority: "www.example.org"},
-            {url: "http://www.example.org/foo/bar", authority: "www.example.org"},
-            {url: "http://example.org:2442/foo", authority: "example.org:2442"},
-            {url: "http://user:pwd@example.org/", authority: "user:pwd@example.org"},
-            {url: "http://user:pwd@example.org:2442/", authority: "user:pwd@example.org:2442"},
-            {url: "ftp://user:pwd@example.org:21/foo/bar", authority: "user:pwd@example.org:21"}
-        ]
-    }
-
-    function test_extractAuthority(data) {
-        compare(UrlUtils.extractAuthority(data.url), data.authority)
-    }
 
     function test_extractHost_data() {
         return [

@@ -11,3 +11,4 @@ target_link_libraries(${TEST}
     webbrowser-common
 )
 add_test(${TEST} ${CMAKE_CURRENT_BINARY_DIR}/${TEST})
+set_tests_properties(${TEST} PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=minimal")
