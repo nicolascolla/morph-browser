@@ -39,6 +39,7 @@
 #include "searchengine.h"
 #include "tabs-model.h"
 #include "text-search-filter-model.h"
+#include "url-utils.h"
 
 class TestContext : public QObject
 {
@@ -167,6 +168,7 @@ MAKE_SINGLETON_FACTORY(BookmarksModel)
 MAKE_SINGLETON_FACTORY(HistoryModelMock)
 MAKE_SINGLETON_FACTORY(TestContext)
 MAKE_SINGLETON_FACTORY(Reparenter)
+MAKE_SINGLETON_FACTORY(UrlUtils)
 
 int main(int argc, char** argv)
 {
@@ -186,6 +188,7 @@ int main(int argc, char** argv)
     qmlRegisterType<LimitProxyModel>(browserUri, 0, 1, "LimitProxyModel");
     qmlRegisterType<TextSearchFilterModel>(browserUri, 0, 1, "TextSearchFilterModel");
     qmlRegisterSingletonType<Reparenter>(browserUri, 0, 1, "Reparenter", Reparenter_singleton_factory);
+    qmlRegisterSingletonType<UrlUtils>(browserUri, 0, 1, "UrlUtils", UrlUtils_singleton_factory);
 
     const char* testUri = "webbrowsertest.private";
     qmlRegisterSingletonType<TestContext>(testUri, 0, 1, "TestContext", TestContext_singleton_factory);

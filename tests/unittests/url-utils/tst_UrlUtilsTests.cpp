@@ -57,7 +57,7 @@ private Q_SLOTS:
         QTest::newRow("row2") << QUrl("file://user:pwd@example.org:2442/") << QString("file");
         QTest::newRow("row3") << QUrl("file:///home/foo/bar.txt") << QString("file");
         QTest::newRow("row4") << QUrl("appid://com.ubuntu.terminal/terminal/current-user-version") << QString("appid");
-        QTest::newRow("row5") << QUrl("www.example.org") << QString("http");
+        QTest::newRow("row5") << QUrl("www.example.org") << QString("");
     }
 
     void test_extractScheme()
@@ -94,7 +94,7 @@ private Q_SLOTS:
         QTest::newRow("row1") << QString("") << false;
         QTest::newRow("row2") << QString("http://example.org/") << true;
         QTest::newRow("row3") << QString("example.org") << true;
-        QTest::newRow("row4") << QString("http://www.example.org?q=foo bar") << false;
+        QTest::newRow("row4") << QString("http://www.example.org?q=foo bar") << true;
         QTest::newRow("row5") << QString("about:blank") << true;
         QTest::newRow("row6") << QString("file:///usr/foo/bar") << true;
         QTest::newRow("row7") << QString("hello://my/name/is/") << true;
@@ -115,7 +115,7 @@ private Q_SLOTS:
     {
         QTest::addColumn<QString>("urlString");
         QTest::addColumn<QUrl>("fixedUrl");
-        QTest::newRow("row1") << QString("About:BLANK") << QUrl("about:blank");
+        QTest::newRow("row1") << QString("About:BLANK") << QUrl("about:BLANK");
         QTest::newRow("row2") << QString("/usr/bin/") << QUrl("file:///usr/bin/");
         QTest::newRow("row3") << QString("example.org") << QUrl("http://example.org");
     }
