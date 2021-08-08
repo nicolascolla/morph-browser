@@ -101,7 +101,7 @@ private Q_SLOTS:
         QTest::newRow("row8") << QString("192.168.1.0") << true;
         QTest::newRow("row9") << QString("foo") << false;
         QTest::newRow("row10") << QString("foo bar") << false;
-        QTest::newRow("row11") << QString("www.example.org search") << false);
+        QTest::newRow("row11") << QString("www.example.org search") << false;
     }
 
     void test_looksLikeAUrl()
