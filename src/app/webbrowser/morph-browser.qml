@@ -85,17 +85,25 @@ QtObject {
     function openUrls(urls, newWindow, incognito) {
         var window = getLastActiveWindow(incognito)
         if (!window || newWindow) {
-            window = windowFactory.createObject(null, {"incognito": incognito})
+            window = windowFactory.createObject(null, {"incognito": incognito});
         }
         for (var i in urls) {
-            window.addTab(urls[i]).load()
+            var tabIndexWithUrl = window.tabsModel.findTabIndexWithUrl(urls[i]);
+
+            if (tabIndexWithUrl >= 0) {
+              window.tabsModel.selectTab(tabIndexWithUrl);
+            }
+            else {
+              window.addTab(urls[i]).load();
+              window.tabsModel.currentIndex = window.tabsModel.count - 1;
+            }
         }
         if (window.tabsModel.count === 0) {
-            window.addTab().load()
+            window.addTab().load();
+            window.tabsModel.currentIndex = window.tabsModel.count - 1;
         }
-        window.tabsModel.currentIndex = window.tabsModel.count - 1
-        window.show()
-        window.requestActivate()
+        window.show();
+        window.requestActivate();
     }
 
     property var windowFactory: Component {

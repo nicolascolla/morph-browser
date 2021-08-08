@@ -63,6 +63,10 @@ Common.BrowserView {
             browser.bindExistingTab(tab);
         }
 
+        function findTabIndexWithUrl(url) {
+            return internal.findTabIndexWithUrl(url);
+        }
+
         function moveTab(from, to) {
             if (from === to
                 || from < 0 || from >= count
@@ -1430,6 +1434,15 @@ Common.BrowserView {
                 if (tabsModel.get(i).url === url)
                     closeTab(i);
             }
+        }
+
+        function findTabIndexWithUrl(url) {
+            var i;
+            for (i = 0; i < tabsModel.count; i++) {
+                if (tabsModel.get(i).url.toString() === url.toString())
+                    return i;
+            }
+            return -1;
         }
 
         function undoCloseTab() {
