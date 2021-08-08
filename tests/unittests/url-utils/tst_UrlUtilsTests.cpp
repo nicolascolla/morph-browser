@@ -32,7 +32,7 @@ private Q_SLOTS:
     {
         QTest::addColumn<QUrl>("url");
         QTest::addColumn<QString>("host");
-        QTest::newRow("row1") << QUrl("http://example.org/") << QString("www.example.org");
+        QTest::newRow("row1") << QUrl("http://example.org/") << QString("example.org");
         QTest::newRow("row2") << QUrl("http://www.example.org/") << QString("www.example.org");
         QTest::newRow("row3") << QUrl("http://www.example.org/foo/bar") << QString("www.example.org");
         QTest::newRow("row4") << QUrl("http://example.org:2442/foo") << QString("example.org");
@@ -101,6 +101,7 @@ private Q_SLOTS:
         QTest::newRow("row8") << QString("192.168.1.0") << true;
         QTest::newRow("row9") << QString("foo") << false;
         QTest::newRow("row10") << QString("foo bar") << false;
+        QTest::newRow("row11") << QString("www.example.org search" << false);
     }
 
     void test_looksLikeAUrl()
