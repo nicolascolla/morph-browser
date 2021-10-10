@@ -1,11 +1,11 @@
-# Malay translation for onion-surf
+# Malay translation for morph-browser
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the onion-surf package.
+# This file is distributed under the same license as the morph-browser package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: onion-surf\n"
+"Project-Id-Version: morph-browser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-18 19:58+0000\n"
 "PO-Revision-Date: 2013-12-14 06:00+0000\n"
@@ -1129,13 +1129,13 @@ msgid "Remove"
 msgstr "Buang"
 
 #. TRANSLATORS: %1 refers to the current page’s title
-#: src/app/webbrowser/onion-surf.qml:108
+#: src/app/webbrowser/morph-browser.qml:108
 #: src/app/webcontainer/webapp-container.qml:76
 #, fuzzy, qt-format
 msgid "%1 - Morph Web Browser"
 msgstr "%1 - Pelayar Sesawang Ubuntu"
 
-#: src/app/webbrowser/onion-surf.qml:110
+#: src/app/webbrowser/morph-browser.qml:110
 #: src/app/webcontainer/webapp-container.qml:78
 #: po/src/app/webbrowser/onion-surf.desktop.in.in.h:2
 #, fuzzy

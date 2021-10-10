@@ -1,17 +1,17 @@
-# Hebrew translation for onion-surf
+# Hebrew translation for morph-browser
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the onion-surf package.
+# This file is distributed under the same license as the morph-browser package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: onion-surf\n"
+"Project-Id-Version: morph-browser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-18 19:58+0000\n"
 "PO-Revision-Date: 2021-06-24 07:30+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
-"onion-surf/he/>\n"
+"morph-browser/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1106,13 +1106,13 @@ msgid "Remove"
 msgstr "הסר"
 
 #. TRANSLATORS: %1 refers to the current page’s title
-#: src/app/webbrowser/onion-surf.qml:108
+#: src/app/webbrowser/morph-browser.qml:108
 #: src/app/webcontainer/webapp-container.qml:76
 #, qt-format
 msgid "%1 - Morph Web Browser"
 msgstr "%1 - דפדפן האינטרנט של מורף"
 
-#: src/app/webbrowser/onion-surf.qml:110
+#: src/app/webbrowser/morph-browser.qml:110
 #: src/app/webcontainer/webapp-container.qml:78
 #: po/src/app/webbrowser/onion-surf.desktop.in.in.h:2
 msgid "Morph Web Browser"
