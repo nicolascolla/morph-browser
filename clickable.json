@@ -7,7 +7,7 @@
     "libapparmor-dev",
     "tor"
   ]
-  "install_bin": [
+  ,"install_bin": [
     "/usr/bin/tor"
   ]
 }
