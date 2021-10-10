@@ -77,7 +77,7 @@ add_custom_target(${DESKTOP_FILE} ALL
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}
         DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
 
-install(FILES "morph-browser.url-dispatcher"
+install(FILES "onion-surf.url-dispatcher"
         DESTINATION ${CMAKE_INSTALL_DATADIR}/url-dispatcher/urls)
 
 install(FILES "onion-surf-content-hub.json"
