@@ -1,17 +1,17 @@
-# Thai translation for morph-browser
+# Thai translation for onion-surf
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
-# This file is distributed under the same license as the morph-browser package.
+# This file is distributed under the same license as the onion-surf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: morph-browser\n"
+"Project-Id-Version: onion-surf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-18 19:58+0000\n"
 "PO-Revision-Date: 2021-05-23 05:10+0000\n"
 "Last-Translator: Wannaphong Phatthiyaphaibun <wannaphong@yahoo.com>\n"
 "Language-Team: Thai <https://translate.ubports.com/projects/ubports/"
-"morph-browser/th/>\n"
+"onion-surf/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1122,15 +1122,15 @@ msgid "Remove"
 msgstr "ลบ"
 
 #. TRANSLATORS: %1 refers to the current page’s title
-#: src/app/webbrowser/morph-browser.qml:108
+#: src/app/webbrowser/onion-surf.qml:108
 #: src/app/webcontainer/webapp-container.qml:76
 #, qt-format
 msgid "%1 - Morph Web Browser"
 msgstr "%1 - เว็บเบราว์เซอร์ Morph"
 
-#: src/app/webbrowser/morph-browser.qml:110
+#: src/app/webbrowser/onion-surf.qml:110
 #: src/app/webcontainer/webapp-container.qml:78
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:2
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:2
 msgid "Morph Web Browser"
 msgstr "เว็บเบราว์เซอร์ Morph"
 
@@ -1215,23 +1215,23 @@ msgstr ""
 msgid "Reset webapp settings"
 msgstr "รีเซ็ตค่าตั้งเบราว์เซอร์"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:1
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:1
 msgid "Morph Browser"
 msgstr "เบราว์เซอร์ Morph"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:3
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:3
 msgid "Browse the World Wide Web using QtWebEngine"
 msgstr "ท่องเว็บในอินเทอร์เน็ตด้วย QtWebEngine"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:4
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:4
 msgid "Internet;WWW;Browser;Web;Explorer"
 msgstr "อินเทอร์เน็ต;WWW;เบราว์เซอร์;เว็บ;ตัวสำรวจ;"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:5
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:5
 msgid "New Window"
 msgstr "หน้าต่างใหม่"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:6
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:6
 msgid "New Private Window"
 msgstr "หน้าต่างส่วนตัวใหม่"
 

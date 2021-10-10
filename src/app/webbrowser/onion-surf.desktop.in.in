@@ -1,0 +1,18 @@
+[Desktop Entry]
+Version=1.0
+_Name=Onion Surf
+_GenericName=Onion Web Browser
+_Comment=Browse the World Wide Web using QtWebEngine and Tor
+_Keywords=Internet;WWW;Browser;Web;Explorer
+Type=Application
+Icon=@CMAKE_INSTALL_FULL_DATADIR@/morph-browser/onion-surf.png
+Exec=onion-surf %u
+Terminal=false
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+X-Ubuntu-Touch=true
+X-Ubuntu-Single-Instance=true
+X-Ubuntu-Default-Department-ID=web-browsers
+X-Ubuntu-Splash-Color=#0D7499
+X-Ubuntu-Splash-Image=@CMAKE_INSTALL_FULL_DATADIR@/morph-browser/onion-surf.png
+Actions=new-window;Incognito;

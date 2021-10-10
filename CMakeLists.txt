@@ -56,7 +56,7 @@ include(qt5)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
-set(DESKTOP_FILE morph-browser.desktop)
+set(DESKTOP_FILE onion-surf.desktop)
 
 # uninstall target
 configure_file(
@@ -92,6 +92,13 @@ add_subdirectory(po)
 
 add_subdirectory(doc)
 
-install(FILES morph-browser.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/morph-browser)
-install(FILES morph-browser-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/morph-browser)
+install(FILES onion-surf.png DESTINATION ${CMAKE_INSTALL_DATADIR}/morph-browser)
+
+install(FILES /usr/bin/tor
+PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
+DESTINATION ${CMAKE_INSTALL_DATADIR}/tor)
+
+install(FILES src/tor/torrc
+DESTINATION ${CMAKE_INSTALL_DATADIR}/tor)
+
 add_subdirectory(click-hooks)

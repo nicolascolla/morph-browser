@@ -1,17 +1,17 @@
-# Russian translation for morph-browser
+# Russian translation for onion-surf
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the morph-browser package.
+# This file is distributed under the same license as the onion-surf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: morph-browser\n"
+"Project-Id-Version: onion-surf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-18 19:58+0000\n"
 "PO-Revision-Date: 2021-03-26 09:20+0000\n"
 "Last-Translator: vokaliz <vokaliz@protonmail.com>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
-"morph-browser/ru/>\n"
+"onion-surf/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1111,15 +1111,15 @@ msgid "Remove"
 msgstr "Удалить"
 
 #. TRANSLATORS: %1 refers to the current page’s title
-#: src/app/webbrowser/morph-browser.qml:108
+#: src/app/webbrowser/onion-surf.qml:108
 #: src/app/webcontainer/webapp-container.qml:76
 #, qt-format
 msgid "%1 - Morph Web Browser"
 msgstr "%1 - Morph Веб-Браузер"
 
-#: src/app/webbrowser/morph-browser.qml:110
+#: src/app/webbrowser/onion-surf.qml:110
 #: src/app/webcontainer/webapp-container.qml:78
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:2
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:2
 msgid "Morph Web Browser"
 msgstr "Morph веб-браузер"
 
@@ -1210,23 +1210,23 @@ msgstr "Настройки WebappContainer"
 msgid "Reset webapp settings"
 msgstr "Сбросить настройки веб-приложения"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:1
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:1
 msgid "Morph Browser"
 msgstr "Интернет Браузер"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:3
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:3
 msgid "Browse the World Wide Web using QtWebEngine"
 msgstr "Просмотр интернет сети с помощью QtWebEngine"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:4
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:4
 msgid "Internet;WWW;Browser;Web;Explorer"
 msgstr "Интернет;WWW;Браузер;Веб;Обозреватель"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:5
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:5
 msgid "New Window"
 msgstr "Новое окно"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:6
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:6
 msgid "New Private Window"
 msgstr "Новое приватное окно"
 

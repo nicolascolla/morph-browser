@@ -1,17 +1,17 @@
-# Chinese (Simplified) translation for morph-browser
+# Chinese (Simplified) translation for onion-surf
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the morph-browser package.
+# This file is distributed under the same license as the onion-surf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: morph-browser\n"
+"Project-Id-Version: onion-surf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-18 19:58+0000\n"
 "PO-Revision-Date: 2021-06-14 20:30+0000\n"
 "Last-Translator: Ito Rimai <ItoRimai@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
-"ubports/morph-browser/zh_Hans/>\n"
+"ubports/onion-surf/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1090,15 +1090,15 @@ msgid "Remove"
 msgstr "移除"
 
 #. TRANSLATORS: %1 refers to the current page’s title
-#: src/app/webbrowser/morph-browser.qml:108
+#: src/app/webbrowser/onion-surf.qml:108
 #: src/app/webcontainer/webapp-container.qml:76
 #, qt-format
 msgid "%1 - Morph Web Browser"
 msgstr "%1 - Morph网页浏览器"
 
-#: src/app/webbrowser/morph-browser.qml:110
+#: src/app/webbrowser/onion-surf.qml:110
 #: src/app/webcontainer/webapp-container.qml:78
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:2
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:2
 msgid "Morph Web Browser"
 msgstr "Morph网页浏览器"
 
@@ -1181,23 +1181,23 @@ msgstr "Web应用容器配置"
 msgid "Reset webapp settings"
 msgstr "重置web应用设置"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:1
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:1
 msgid "Morph Browser"
 msgstr "Morph 浏览器"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:3
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:3
 msgid "Browse the World Wide Web using QtWebEngine"
 msgstr "使用QtWebEngine浏览互联网"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:4
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:4
 msgid "Internet;WWW;Browser;Web;Explorer"
 msgstr "互联网；WWW；浏览器；"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:5
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:5
 msgid "New Window"
 msgstr "新建窗口"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:6
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:6
 msgid "New Private Window"
 msgstr "新建隐私窗口"
 

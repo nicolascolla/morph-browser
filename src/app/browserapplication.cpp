@@ -120,6 +120,7 @@ bool BrowserApplication::initialize(const QString& qmlFileSubPath
         return false;
     }
 
+    qInfo() << appId;
     if (appId.isEmpty()) {
         qCritical() << "Cannot initialize the runtime environment: "
                        "no application id detected.";
@@ -190,6 +191,13 @@ bool BrowserApplication::initialize(const QString& qmlFileSubPath
         qputenv("QT_QUICK_CONTROLS_STYLE", "Suru");
     }
 
+
+    qInfo() << "Setting proxy to use tor";
+    QNetworkProxy proxy;
+     proxy.setHostName("localhost");
+     proxy.setPort(9050);
+     proxy.setType(QNetworkProxy::Socks5Proxy);
+     QNetworkProxy::setApplicationProxy(proxy);
     const char* uri = "webbrowsercommon.private";
     qmlRegisterSingletonType<BrowserUtils>(uri, 0, 1, "BrowserUtils", BrowserUtils_singleton_factory);
     qmlRegisterSingletonType<DomainPermissionsModel>(uri, 0, 1, "DomainPermissionsModel", DomainPermissionsModel_singleton_factory);

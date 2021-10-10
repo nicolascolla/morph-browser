@@ -1,9 +1,13 @@
 {
   "template": "cmake",
-  "kill": "morph-browser",
+  "kill": "onion-surf",
   "build_args": "-DCLICK_MODE=ON",
   "dependencies_target": [
-    "qtwebengine5-dev"
-    ,"libapparmor-dev"
+    "qtwebengine5-dev",
+    "libapparmor-dev",
+    "tor"
+  ]
+  "install_bin": [
+    "/usr/bin/tor"
   ]
 }

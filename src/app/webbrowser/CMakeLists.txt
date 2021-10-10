@@ -3,6 +3,9 @@ project(morph-browser)
 find_package(Qt5Concurrent REQUIRED)
 find_package(Qt5Sql REQUIRED)
 
+set(THREADS_PTHREAD_ARG "2" CACHE STRING "Forcibly set by CMakeLists.txt." FORCE)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
 include_directories(
     ${CMAKE_BINARY_DIR}
     ${webbrowser-common_SOURCE_DIR}
@@ -28,6 +31,7 @@ add_library(${WEBBROWSER_APP_MODELS} STATIC ${WEBBROWSER_APP_MODELS_SRC})
 target_link_libraries(${WEBBROWSER_APP_MODELS}
     Qt5::Core
     Qt5::Sql
+    Threads::Threads
 #    Qt5::WebEngine
 )
 
@@ -37,7 +41,7 @@ set(WEBBROWSER_APP_SRC
     morph-browser.cpp
 )
 
-set(WEBBROWSER_APP morph-browser)
+set(WEBBROWSER_APP onion-surf)
 
 add_executable(${WEBBROWSER_APP} ${WEBBROWSER_APP_SRC})
 target_link_libraries(${WEBBROWSER_APP}
@@ -47,6 +51,7 @@ target_link_libraries(${WEBBROWSER_APP}
     Qt5::Quick
     ${COMMONLIB}
     ${WEBBROWSER_APP_MODELS}
+    ${CMAKE_THREAD_LIBS_INIT}
 )
 
 install(TARGETS ${WEBBROWSER_APP}
@@ -75,7 +80,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE}
 install(FILES "morph-browser.url-dispatcher"
         DESTINATION ${CMAKE_INSTALL_DATADIR}/url-dispatcher/urls)
 
-install(FILES "morph-browser-content-hub.json"
+install(FILES "onion-surf-content-hub.json"
     DESTINATION ${CMAKE_INSTALL_DATADIR}/content-hub/peers
     RENAME morph-browser
     )
@@ -91,5 +96,5 @@ if(${CLICK_MODE})
 
   configure_file(manifest.json.in ${CMAKE_CURRENT_BINARY_DIR}/manifest.json)
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INSTALL_PREFIX})
-  install(FILES morph-browser.apparmor DESTINATION ${CMAKE_INSTALL_PREFIX})
+  install(FILES onion-surf.apparmor DESTINATION ${CMAKE_INSTALL_PREFIX})
 endif()

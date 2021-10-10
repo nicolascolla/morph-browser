@@ -1,11 +1,11 @@
-# Punjabi translation for morph-browser
+# Punjabi translation for onion-surf
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
-# This file is distributed under the same license as the morph-browser package.
+# This file is distributed under the same license as the onion-surf package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: morph-browser\n"
+"Project-Id-Version: onion-surf\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-18 19:58+0000\n"
 "PO-Revision-Date: 2015-06-17 14:25+0000\n"
@@ -1110,15 +1110,15 @@ msgid "Remove"
 msgstr ""
 
 #. TRANSLATORS: %1 refers to the current page’s title
-#: src/app/webbrowser/morph-browser.qml:108
+#: src/app/webbrowser/onion-surf.qml:108
 #: src/app/webcontainer/webapp-container.qml:76
 #, fuzzy, qt-format
 msgid "%1 - Morph Web Browser"
 msgstr "%1 - ਉਬੰਤੂ ਵੈੱਬ ਬਰਾਊਜ਼ਰ"
 
-#: src/app/webbrowser/morph-browser.qml:110
+#: src/app/webbrowser/onion-surf.qml:110
 #: src/app/webcontainer/webapp-container.qml:78
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:2
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:2
 #, fuzzy
 msgid "Morph Web Browser"
 msgstr "ਵੈੱਬ ਬਰਾਊਜ਼ਰ"
@@ -1202,25 +1202,25 @@ msgstr ""
 msgid "Reset webapp settings"
 msgstr "ਬਰਾਊਜ਼ਰ ਸੈਟਿੰਗ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:1
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:1
 #, fuzzy
 msgid "Morph Browser"
 msgstr "ਬਰਾਊਜ਼ਰ"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:3
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:3
 #, fuzzy
 msgid "Browse the World Wide Web using QtWebEngine"
 msgstr "ਵਰਲਡ ਵਾਈਡ ਵੈੱਬ ਨੂੰ ਬਰਾਉਜ਼ ਕਰੋ"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:4
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:4
 msgid "Internet;WWW;Browser;Web;Explorer"
 msgstr "ਇੰਟਰਨੈੱਟ;WWW;ਬਰਾਊਜ਼ਰ;ਵੈੱਬ;ਅੈਕਸਪਲੋਰਰ"
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:5
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:5
 msgid "New Window"
 msgstr ""
 
-#: po/src/app/webbrowser/morph-browser.desktop.in.in.h:6
+#: po/src/app/webbrowser/onion-surf.desktop.in.in.h:6
 msgid "New Private Window"
 msgstr ""
 
