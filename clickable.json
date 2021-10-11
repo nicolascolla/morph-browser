@@ -7,6 +7,9 @@
     "libapparmor-dev",
     "tor"
   ]
+  ,"dependencies_host": [
+    "xvfb"
+  ]
   ,"install_bin": [
     "/usr/bin/tor"
   ]
