@@ -42,6 +42,7 @@ Clone this repository and build, specifying your target architecture (in this ca
 ```
 $ git clone https://github.com/nicolascolla/onion-surf.git
 $ cd onion-surf
+$ sed -i 's/MYCOMPUTERSARCH/arm64/g' clickable.json
 $ clickable --arch=arm64
 ```
 
