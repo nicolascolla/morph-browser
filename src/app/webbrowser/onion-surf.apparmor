@@ -10,7 +10,7 @@
         "push-notification-client",
         "webview"
         "content_exchange",
-        "content_exchange_source",
+        "content_exchange_source"
     ],
     "policy_version": 16.04
 }
