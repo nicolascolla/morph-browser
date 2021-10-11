@@ -10,23 +10,19 @@ All changes upstream will be merged to the extent possible and the browser will 
 
 ### WARNING: Not an anonymous browser!
 
-This browser, like the browser it is a clone of, is [QtWebEngine-based](https://wiki.qt.io/QtWebEngine). It lacks all the features that make a "real" Tor browser (based on Firefox) secure and private, and (as usual with any project vaguely involving Google) it is easily fingerprintable. On top of that, it is running on a small platform. How many Ubuntu Touch users can you find in the wild? How many of those UT users will be running Tor? This is yet another bit of information that could be used to identify you.
+This browser, like the browser it is a clone of, is [QtWebEngine-based](https://wiki.qt.io/QtWebEngine). It lacks all the features that make a "real" Tor browser (based on Firefox) secure and private, and (as usual with any project vaguely involving Google) it is easily fingerprintable. On top of that, it is running on a small platform. How many Ubuntu Touch users can you find in the wild? How many of those UT users will be running Tor? This is yet another bit of information that could be used to identify you. Your DNS requests will leak, which means **your ISP will probably know what websites you are visiting** (this will be possible to fix in the future when Ubuntu Touch upgrades Qt to =< 5.15).
 
 Use this browser if:
 
--You want to hide your real IP from websites.
-
--You want to confuse ad networks.
-
--You want a (small) additional layer of privacy.
+* You want to hide your real IP from websites.
+* You want to confuse ad networks.
+* You want a (small) additional layer of privacy.
 
 Don't use this browser if:
 
--You need to blend in with other Tor users (use the [Tor Browser](https://www.torproject.org/download/) for that).
-
--You are a whistleblower.
-
--You want to hide from a three-letter agency (good luck with that).
+* You need to blend in with other Tor users (use the [Tor Browser](https://www.torproject.org/download/) for that).
+* You are a whistleblower.
+* You want to hide from a three-letter agency (good luck with that).
 
 Only a PC running [a free BIOS](https://www.coreboot.org/) and [Tails](https://tails.boum.org/) will be able to give you any real semblance of anonymity. Act accordingly.
 
@@ -54,4 +50,5 @@ $ clickable --arch=arm64
 
 ### TODO:
 
--Block ads (Tor will ignore your /etc/hosts file, so [uAdblock](https://open-store.io/app/uadblock.mariogrip) is not an option).
+* Block ads (Tor will ignore your /etc/hosts file, so [uAdblock](https://open-store.io/app/uadblock.mariogrip) is not an option).
+* Find a way to stop leaking DNS requests in the current Ubuntu Touch version.
