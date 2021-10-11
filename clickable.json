@@ -15,7 +15,7 @@
   "build_args": "-DCLICK_MODE=ON",
   "dependencies_target": [
     "qtwebengine5-dev",
-    "libapparmor-dev",
+    "libapparmor-dev"
   ]
   ,"dependencies_host": [
     "xvfb"
