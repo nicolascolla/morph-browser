@@ -786,12 +786,6 @@ Common.BrowserView {
 
         drawerActions: [
             Action {
-                objectName: "newwindow"
-                text: i18n.tr("New window")
-                iconName: "browser-tabs"
-                onTriggered: browser.newWindowRequested(false)
-            },
-            Action {
                 objectName: "newprivatewindow"
                 text: i18n.tr("New private window")
                 iconName: "private-browsing"
@@ -810,12 +804,6 @@ Common.BrowserView {
                 text: i18n.tr("Bookmarks")
                 iconName: "bookmark"
                 onTriggered: bookmarksViewLoader.active = true
-            },
-            Action {
-                objectName: "history"
-                text: i18n.tr("History")
-                iconName: "history"
-                onTriggered: historyViewLoader.active = true
             },
             Action {
                 objectName: "findinpage"
