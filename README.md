@@ -1,167 +1,54 @@
-# morph-browser
+# Onion Surf
 
-Lightweight web browser tailored for Ubuntu,
-based on the Qt WebEngine  and using the Ubuntu UI components.
-It requires Qt 5.9 to build and run.
+![](icon_small.png)
 
-Morph Icon is based on Origami Licensed CC-by Creative Mania from the Noun Project
+Onion Surf is a private browser for Ubuntu Touch that routes all internet traffic through the Tor network. It is a fork of the most recent version of [Morph](https://github.com/ubports/morph-browser) with [nanu-c's modifications](https://github.com/nanu-c/onion-browser) and some quality-of-life improvements, like a [hiding address bar](https://github.com/ubports/morph-browser/pull/333/commits/2df8ced9232fea2b6de6fc10e250b6839bdd084e) (experimental, still not merged upstream) and some custom flags to increase privacy.
 
-= Building =
+All changes upstream will be merged to the extent possible and the browser will be updated with every Tor release. Minor changes (like additional custom flags) might be added in the future.
 
-The build system uses cmake.
-To compile, simply invoke cmake and then make:
+### WARNING: Not an anonymous browser!
 
-    $ cmake .
-    $ make
+This browser, like the browser it is a clone of, is [QtWebEngine-based](https://wiki.qt.io/QtWebEngine). It lacks all the features that make a "real" Tor browser (based on Firefox) secure and private, and (as usual with any project vaguely involving Google) it is easily fingerprintable. On top of that, it is running on a small platform. How many Ubuntu Touch users can you find in the wild? How many of those UT users will be running Tor? This is yet another bit of information that could be used to identify you.
 
-The application can also be cross compiled for an ARM target on a X86 host.
-To do that, just pass this additional parameter to cmake:
+Use this browser if:
 
-    $ cmake -DCMAKE_TOOLCHAIN_FILE=cmake/ubuntu-arm-linux-gnueabihf.cmake .
+-You want to hide your real IP from websites.
 
-== Building for ubuntu touch ==
+-You want to confuse ad networks.
 
-Simply use [clickable](http://clickable.bhdouglass.com/en/latest/) command line
+-You want a (small) additional layer of privacy.
 
-	$ clickable
+Don't use this browser if:
 
-= Running =
+-You need to blend in with other Tor users (use the [Tor Browser](https://www.torproject.org/download/) for that).
 
-webbrowser-app can be run from the development branch without the need to
-install any files. Just run:
+-You are a whistleblower.
 
-    $ ./src/app/webbrowser/webbrowser-app
+-You want to hide from a three-letter agency (good luck with that).
 
-The executable accepts command line switches and parameters. To find out which,
-just run:
+Only a PC running [a free BIOS](https://www.coreboot.org/) and [Tails](https://tails.boum.org/) will be able to give you any real semblance of anonymity. Act accordingly.
 
-    $ ./src/app/webbrowser/webbrowser-app --help
+### Building instructions (Ubuntu-based distros)
 
+Install [clickable](https://clickable-ut.dev/en/latest/install.html):
 
-= Build with docker =
+```
+$ sudo add-apt-repository ppa:bhdouglass/clickable
+$ sudo apt-get install clickable
+```
 
-First we need to build the image
+Clone this repository and build, specifying your target architecture (in this case, arm64):
 
-   $ docker build -t ubports_xenial .
+```
+$ git clone https://github.com/nicolascolla/onion-surf.git
+$ cd onion-surf
+$ clickable --arch=arm64
+```
 
-Then we can build the app
+### Screenshots
 
-   $ docker run --privileged -ti --rm -e DISPLAY=:0 -v /var/run/dbus:/var/run/dbus -v /tmp/.X11-unix:/tmp/.X11-unix -v `pwd`:/home/developer/ubports_build ubports_xenial bash -c "cmake . && make"
+![](screenshot1.png) ![](screenshot2.png)
 
-Now we can run the app
-   
-   $ docker run --privileged -ti --rm -e DISPLAY=:0 -v /var/run/dbus:/var/run/dbus -v /tmp/.X11-unix:/tmp/.X11-unix -v `pwd`:/home/developer/ubports_build ubports_xenial bash -c "./src/app/webbrowser/webbrowser-app" 
+### TODO:
 
-= Unit tests =
-
-To run the unit tests, you can use the commands below:
-
-    $ make test
-
-      - or -
-
-    $ ctest
-
-
-= Automated UI tests =
-
-webbrowser-app uses autopilot (https://launchpad.net/autopilot) to test its UI.
-To run the tests locally, you will need to install python3-autopilot and
-autopilot-qt5.
-Then do the following:
-
-    $ cd tests/autopilot/
-    $ autopilot3 run webbrowser_app
-
-You can get a list of all available tests with the following command:
-
-    $ autopilot3 list webbrowser_app
-
-In order to run the tests in a virtual machine with an environment closer to
-what a user will get in Ubuntu Touch, see the Dep8 tests section.
-
-
-= Code coverage =
-
-To generate a report with detailed code coverage, you need to re-run cmake with
-"CMAKE_BUILD_TYPE=coverage":
-
-    $ cmake -DCMAKE_BUILD_TYPE=coverage .
-    $ make
-    $ make test
-    $ make coverage
-
-This will generate a coverage report in XML format (coverage.xml) and an
-interactive human-readable report in HTML format (coveragereport/index.html).
-
-
-= Dep8 tests =
-
-Dep8 tests exercise the package "as-installed".
-
-Currently, the webbrowser-app has one suite of dep8 tests that uses autopilot
-(https://launchpad.net/autopilot) to test from the point of view of the user.
-
-To run the tests you will need autopkgtest:
-
-    $ sudo apt-get install autopkgtest
-
-You can use multiple test beds to execute the tests. Below you will find
-instructions to run them in a virtual machine
-You can find more information with:
-
-    $ man adt-run
-
-== Run dep8 tests ==
-
-To run the tests in a qemu virtual machine, you will first have to create it
-(see /usr/share/doc/autopkgtest/README.running-tests.rst.gz). We output the
-image to ~/ rather than the current directory, so it will be in a safer
-place to avoid rebuilding images every time. You can store it in any
-directory you wish. This image is better consumed "fresh", building it daily
-will avoid long updates/upgrades when running the tests.
-
-    $ adt-buildvm-ubuntu-cloud -r $(lsb_release -c -s) -a amd64 -o ~/
-
-Then run the tests using adt-run with the qemu virtualization host against
-the current archive.
-
-    $ adt-run -B -U --unbuilt-tree . \
-      -o ~/adt-browser-test/$(date +%Y-%m-%d-%H-%M) \
-      --- qemu ~/adt-$(lsb_release -c -s)-amd64-cloud.img
-
-The tests can also be run on a local phone.
-
-    $ adt-run -B -U --unbuilt-tree . \
-      -o ~/adt-browser-test/$(date +%Y-%m-%d-%H-%M) \
-      --- ssh -s adb -- -p <password> --serial <ADB_SERIAL> 
-
-== Examine the dep8 autopilot results ==
-
-To examine the test results, which are in subunit format, additional tools are
-required, such as trv (https://launchpad.net/trv).
-
-You can find the results file in the directory
-~/adt-browser-test/$(date +%Y-%m-%d-%H-%M)/artifacts.
-
-
-= Settings =
-
-webbrowser-app supports a limited set of custom settings, persisted on disk in
-the following INI-like file:
-
-    $HOME/.config/webbrowser-app/webbrowser-app.conf
-
-The following keys are supported:
-
- - 'homepage': a URL that the browser will open when launched if no URL is
-   specified on the command line
-
- - 'searchengine': a custom search engine specification, looked up in
-   $HOME/.local/share/webbrowser-app/searchengines/{value}.xml and following
-   the OpenSearch document description format
-   (http://www.opensearch.org/Specifications/OpenSearch/1.1)
-
- - restoreSession: whether to restore the previous browsing session at startup
-   (defaults to true)
-
+-Block ads (Tor will ignore your /etc/hosts file, so [uAdblock](https://open-store.io/app/uadblock.mariogrip) is not an option).
