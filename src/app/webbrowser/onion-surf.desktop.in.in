@@ -13,6 +13,6 @@ MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme
 X-Ubuntu-Touch=true
 X-Ubuntu-Single-Instance=true
 X-Ubuntu-Default-Department-ID=web-browsers
-X-Ubuntu-Splash-Color=#0D7499
+X-Ubuntu-Splash-Color=#9A73B2
 X-Ubuntu-Splash-Image=@CMAKE_INSTALL_FULL_DATADIR@/morph-browser/onion-surf.png
 Actions=new-window;Incognito;
