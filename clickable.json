@@ -1,11 +1,21 @@
 {
-  "template": "cmake",
+  "image_setup": {
+    "run": [
+      "apt-get install apt-transport-https",
+      "echo 'deb https://deb.torproject.org/torproject.org xenial main' >> /etc/apt/sources.list",
+      "wget https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc",
+      "gpg --import A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc",
+      "gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -",
+      "apt-get update",
+      "apt-get install tor:arm64 -y"
+    ]
+  }
+  ,"template": "cmake",
   "kill": "onion-surf",
   "build_args": "-DCLICK_MODE=ON",
   "dependencies_target": [
     "qtwebengine5-dev",
     "libapparmor-dev",
-    "tor"
   ]
   ,"dependencies_host": [
     "xvfb"
