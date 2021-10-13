@@ -308,30 +308,6 @@ FocusScope {
                         width: parent.width
 
                         ListItem {
-                            objectName: "startInPrivateMode"
-
-                            ListItemLayout {
-                                title.text: i18n.tr("Start in private mode")
-                                CheckBox {
-                                    id: startInPrivateModeCheckbox
-                                    SlotsLayout.position: SlotsLayout.Trailing
-                                    onTriggered: {
-                                        settingsObject.incognitoOnStart = checked;
-                                        if (checked) {
-                                            settingsObject.restoreSession = false;
-                                        }
-                                    }
-                                }
-                            }
-
-                            Binding {
-                                target: startInPrivateModeCheckbox
-                                property: "checked"
-                                value: settingsObject.incognitoOnStart
-                            }
-                        }
-
-                        ListItem {
                             objectName: "setDomainWhiteListMode"
 
                             ListItemLayout {
