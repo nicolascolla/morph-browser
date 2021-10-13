@@ -726,7 +726,7 @@ Common.BrowserView {
         incognito: browser.incognito
 
         showTabsBar: browser.wide || !browser.wide
-        showFaviconInAddressBar: browser.wide || !browser.wide
+        showFaviconInAddressBar: browser.wide && !browser.wide
 
         thisWindow: browser.thisWindow
         windowFactory: browser.windowFactory
