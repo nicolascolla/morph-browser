@@ -249,7 +249,7 @@ msgstr "agente de usuario personalizado"
 
 #: src/app/DomainSettingsPage.qml:315 src/app/DomainSettingsPage.qml:320
 msgid "Zoom: "
-msgstr "Zum: "
+msgstr "Zoom: "
 
 #: src/app/DomainSettingsPage.qml:320
 msgid "not set"
@@ -497,7 +497,7 @@ msgstr "Guardar como PDF"
 
 #: src/app/WebViewImpl.qml:667 src/app/webbrowser/Browser.qml:815
 msgid "Zoom"
-msgstr "Zum"
+msgstr "Zoom"
 
 #: src/app/ZoomControls.qml:62
 msgid "Zoom Out"
@@ -522,7 +522,7 @@ msgstr "Guardar"
 
 #: src/app/ZoomControls.qml:101
 msgid "Current Zoom"
-msgstr "Zum actual"
+msgstr "Zoom actual"
 
 #: src/app/ZoomControls.qml:102
 msgid "domain"
@@ -538,7 +538,7 @@ msgstr "autoajuste"
 
 #: src/app/ZoomControls.qml:187
 msgid "Save Zoom"
-msgstr "Guardar zum"
+msgstr "Guardar zoom"
 
 #: src/app/ZoomControls.qml:188
 msgid "none"
@@ -550,19 +550,19 @@ msgid ""
 "domain zoom (currently %1 and can be removed with reset button or from "
 "domain specific settings in privacy settings)"
 msgstr ""
-"zum del dominio (actualmente %1 y puede ser restaurado con el botón de "
+"zoom del dominio (actualmente %1 y puede ser restaurado con el botón de "
 "reinicio o desde los ajustes específicos de dominio en los ajustes de "
 "privacidad)"
 
 #: src/app/ZoomControls.qml:189
 msgid " and resets domain zoom"
-msgstr " y restaurar el zum del dominio"
+msgstr " y restaurar el zoom del dominio"
 
 #: src/app/ZoomControls.qml:189
 #, qt-format
 msgid "default zoom (currently %1%, can be changed from settings menu%2)"
 msgstr ""
-"zum por defecto ( actualmente %1%, puede ser cambiado desde el menú de "
+"zoom por defecto ( actualmente %1%, puede ser cambiado desde el menú de "
 "ajustes %2)"
 
 #: src/app/ZoomControls.qml:190
@@ -572,7 +572,7 @@ msgstr "la aplicación web actual"
 #: src/app/ZoomControls.qml:190
 #, qt-format
 msgid "Current zoom (%1%) can be saved for %2 as "
-msgstr "Zum actual (%1%) puede ser guardado por %2 como "
+msgstr "Zoom actual (%1%) puede ser guardado por %2 como "
 
 #: src/app/ZoomControls.qml:192
 msgid "or"
@@ -1016,7 +1016,7 @@ msgstr "Ajusta el ancho del sitio web a la ventana"
 #: src/app/webbrowser/SettingsPage.qml:179
 #: src/app/webcontainer/WebappSettingsPage.qml:78
 msgid "Default Zoom"
-msgstr "Zum predeterminado"
+msgstr "Zoom predeterminado"
 
 #: src/app/webbrowser/SettingsPage.qml:218
 #: src/app/webbrowser/SettingsPage.qml:300
@@ -1235,7 +1235,7 @@ msgstr "Nueva ventana privada"
 #~ "Set current zoom as default zoom for %1 ? (You can change it in the "
 #~ "settings menu)"
 #~ msgstr ""
-#~ "¿Configurar el zum actual como predeterminado para %1? (Puede cambiarlo "
+#~ "¿Configurar el zoom actual como predeterminado para %1? (Puede cambiarlo "
 #~ "en el menú de configuración)"
 
 #~ msgid ""
