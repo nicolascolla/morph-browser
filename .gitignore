@@ -64,3 +64,7 @@ build/
 *.qmlc
 *.jsc
 .directory
+
+*.diff
+*.rej
+*.orig
