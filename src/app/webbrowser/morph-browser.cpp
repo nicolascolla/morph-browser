@@ -88,9 +88,9 @@ int WebbrowserApp::run_tor(const char *dir) {
        char *argv[4];
        argv[0] = "tor";
        argv[1] = "-f";
-       argv[2] = "/opt/click.ubuntu.com/onion-surf.collaproductions/current/share/tor/torrc";
+       argv[2] = "share/tor/torrc";
        argv[3] = NULL;
-       // char *const cmd[] = {"tor", " -f ", "/opt/click.ubuntu.com/onion-surf.collaproductions/current/tor/torrc", NULL};
+       // char *const cmd[] = {"tor", " -f ", "tor/torrc", NULL};
        execvp(cmd, argv);
 
        /* exec does not return unless the program couldn't be started.
