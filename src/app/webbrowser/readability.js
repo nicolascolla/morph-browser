@@ -2394,10 +2394,8 @@ function makeDomReadable() {
   }
 
   let style = document.createElement("style");
-  style.innerHTML = `body { background-color: #f4ecd8;
-                            color: #5b4636;
-                            margin: 0px;
-                            padding: 1rem;
+  style.innerHTML = `body { margin: 0px;
+                            padding: 2rem;
                             max-width: 100%; }
                      img { max-width: 100%; height: auto; }
                      a { color: #0060df; }
