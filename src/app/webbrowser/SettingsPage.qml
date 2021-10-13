@@ -358,18 +358,6 @@ FocusScope {
                         }
 
                         ListItem {
-                            objectName: "privacy.clearHistory"
-                            ListItemLayout {
-                                title.text: i18n.tr("Clear browsing history")
-                            }
-                            enabled: HistoryModel.count > 0
-                            onClicked: {
-                                var dialog = PopupUtils.open(privacyConfirmDialogComponent, privacyItem, {"title": i18n.tr("Clear browsing history?")})
-                                dialog.confirmed.connect(HistoryModel.clearAll)
-                            }
-                        }
-
-                        ListItem {
                             objectName: "privacy.clearCache"
                             ListItemLayout {
                                 title.text: i18n.tr("Clear cache")
