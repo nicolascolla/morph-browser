@@ -45,6 +45,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <fstream>
 #include <iostream>
 #include <pthread.h>
 
@@ -66,39 +67,75 @@ MAKE_SINGLETON_FACTORY(Reparenter)
 
 
 int WebbrowserApp::run_tor(const char *dir) {
+
+   using namespace std;
+
    int pid, status;
    QString torPath =  QGuiApplication::applicationDirPath() + "/share/tor/tor";
 
-   // first we fork the process
-   if (pid = fork()) {
-       // pid != 0: this is the parent process (i.e. our process)
-       waitpid(pid, &status, 0); // wait for the child to exit
+   // check if /home/phablet/.torrc exists. If it does, use it. Otherwise, load share/tor/torrc
+   ifstream ifile;
+   ifile.open("/home/phablet/.config/onion-surf.collaproductions/torrc");
+   if(ifile) {
+      // first we fork the process
+      if (pid = fork()) {
+          // pid != 0: this is the parent process (i.e. our process)
+          waitpid(pid, &status, 0); // wait for the child to exit
+      } else {
+          /* pid == 0: this is the child process. now let's load the
+             "ls" program into this process and run it */
+
+          // const char executable[] = "/bin/ls";
+
+          // load it. there are more exec__ functions, try 'man 3 exec'
+          // execl takes the arguments as parameters. execv takes them as an array
+          // this is execl though, so:
+          //      exec         argv[0]  argv[1] end
+          // execl(dir, dir, NULL,    NULL);
+          char *cmd = "tor";
+          char *argv[4];
+          argv[0] = "tor";
+          argv[1] = "-f";
+          argv[2] = "/home/phablet/.config/onion-surf.collaproductions/torrc";
+          argv[3] = NULL;
+          // char *const cmd[] = {"tor", " -f ", "tor/torrc", NULL};
+          execvp(cmd, argv);
+
+          /* exec does not return unless the program couldn't be started.
+             when the child process stops, the waitpid() above will return.
+          */
+      }
    } else {
-       /* pid == 0: this is the child process. now let's load the
-          "ls" program into this process and run it */
+      // first we fork the process
+	   if (pid = fork()) {
+	       // pid != 0: this is the parent process (i.e. our process)
+	       waitpid(pid, &status, 0); // wait for the child to exit
+	   } else {
+	       /* pid == 0: this is the child process. now let's load the
+		  "ls" program into this process and run it */
 
-       // const char executable[] = "/bin/ls";
+	       // const char executable[] = "/bin/ls";
 
-       // load it. there are more exec__ functions, try 'man 3 exec'
-       // execl takes the arguments as parameters. execv takes them as an array
-       // this is execl though, so:
-       //      exec         argv[0]  argv[1] end
-       // execl(dir, dir, NULL,    NULL);
-       char *cmd = "tor";
-       char *argv[4];
-       argv[0] = "tor";
-       argv[1] = "-f";
-       argv[2] = "share/tor/torrc";
-       argv[3] = NULL;
-       // char *const cmd[] = {"tor", " -f ", "tor/torrc", NULL};
-       execvp(cmd, argv);
+	       // load it. there are more exec__ functions, try 'man 3 exec'
+	       // execl takes the arguments as parameters. execv takes them as an array
+	       // this is execl though, so:
+	       //      exec         argv[0]  argv[1] end
+	       // execl(dir, dir, NULL,    NULL);
+	       char *cmd = "tor";
+	       char *argv[4];
+	       argv[0] = "tor";
+	       argv[1] = "-f";
+	       argv[2] = "share/tor/torrc";
+	       argv[3] = NULL;
+	       // char *const cmd[] = {"tor", " -f ", "tor/torrc", NULL};
+	       execvp(cmd, argv);
 
-       /* exec does not return unless the program couldn't be started.
-          when the child process stops, the waitpid() above will return.
-       */
-
-
+	       /* exec does not return unless the program couldn't be started.
+		  when the child process stops, the waitpid() above will return.
+	       */
+      }
    }
+   
    return status; // this is the parent process again.
 }
 void *WebbrowserApp::thread_tor(void *argument) {
