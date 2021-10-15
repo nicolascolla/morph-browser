@@ -27,7 +27,7 @@ WebEngineProfile {
     property alias maxCacheSizeHint: oxideContext.httpCacheMaximumSize
     property alias incognito: oxideContext.offTheRecord
     property int userAgentId: 0
-    property string customUserAgent: ""
+    property string customUserAgent: "Mozilla/5.0 (Windows NT 10.0; rv:78.0) Gecko/20100101 Firefox/78.0"
     readonly property string defaultUserAgent: __ua.defaultUA
 
     offTheRecord: false
