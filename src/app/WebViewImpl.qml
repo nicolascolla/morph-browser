@@ -63,6 +63,8 @@ WebView {
 
     // allow pasting to clipboard from javascript
     settings.javascriptCanAccessClipboard: true
+    
+    settings.webRTCPublicInterfacesOnly: true
 
     /*experimental.certificateVerificationDialog: CertificateVerificationDialog {}
     experimental.proxyAuthenticationDialog: ProxyAuthenticationDialog {}*/
