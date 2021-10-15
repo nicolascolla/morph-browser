@@ -286,7 +286,7 @@ QtObject {
 
     property var settings: Settings {
         property url homepage: ""
-        property string searchEngine: "duckduckgo"
+        property string searchEngine: "startpage"
         property bool restoreSession: true
         property bool setDesktopMode: false
         property bool autoFitToWidthEnabled: false
@@ -299,7 +299,7 @@ QtObject {
 
         function restoreDefaults() {
             homepage = ""
-            searchEngine = "duckduckgo";
+            searchEngine = "startpage";
             restoreSession = true;
             setDesktopMode = false;
             autoFitToWidthEnabled = false;
