@@ -3,6 +3,7 @@
 ![](icon_small.png)
 
 [![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/onion-surf.collaproductions)
+[![](https://i.imgur.com/KIipzE8.png)](https://t.me/collaproductions)
 
 Onion Surf is a private browser for Ubuntu Touch that routes all internet traffic through the Tor network. It is a fork of the most recent version of [Morph](https://github.com/ubports/morph-browser) with [nanu-c's modifications](https://github.com/nanu-c/onion-browser) and some quality-of-life improvements, like a [hiding address bar](https://github.com/ubports/morph-browser/pull/333/commits/2df8ced9232fea2b6de6fc10e250b6839bdd084e) (experimental, still not merged upstream), [reader mode](https://github.com/ubports/morph-browser/pull/517) and some custom flags to increase privacy.
 
