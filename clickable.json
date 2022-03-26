@@ -10,7 +10,7 @@
       "apt-get install tor:MYCOMPUTERSARCH -y"
     ]
   }
-  ,"template": "cmake",
+  ,"builder": "cmake",
   "kill": "onion-surf",
   "build_args": "-DCLICK_MODE=ON",
   "dependencies_target": [
