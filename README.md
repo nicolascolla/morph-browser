@@ -11,7 +11,7 @@ All changes upstream will be merged to the extent possible and the browser will 
 
 ### WARNING: Not an anonymous browser!
 
-This browser, like the browser it is a clone of, is [QtWebEngine-based](https://wiki.qt.io/QtWebEngine). It lacks all the features that make a "real" Tor browser (based on Firefox) secure and private, and (as usual with any project vaguely involving Google) it is easily fingerprintable. On top of that, it is running on a small platform. How many Ubuntu Touch users can you find in the wild? How many of those UT users will be running Tor? This is yet another bit of information that could be used to identify you. Your DNS requests will leak, which means **your ISP will probably know what websites you are visiting** (this will be possible to fix in the future when Ubuntu Touch upgrades QtWebEngine to 5.15). WebRTC can't be disabled, which means **websites using this feature could be able to see your real IP**.
+This browser, like the browser it is a clone of, is [QtWebEngine-based](https://wiki.qt.io/QtWebEngine). It lacks all the features that make a "real" Tor browser (based on Firefox) secure and private, and (as usual with any project vaguely involving Google) it is easily fingerprintable. WebRTC can't be disabled, which means **websites using this feature could be able to see your real IP**.
 
 Use this browser if:
 
@@ -21,7 +21,6 @@ Use this browser if:
 
 Don't use this browser if:
 
-* You want to hide your browsing habits from your ISP.
 * You need to blend in with other Tor users (use the [Tor Browser](https://www.torproject.org/download/) for that).
 * You are a whistleblower.
 * You want to hide from a three-letter agency (good luck with that).
