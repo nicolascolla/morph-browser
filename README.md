@@ -52,7 +52,6 @@ $ clickable --arch=arm64
 ### TODO:
 
 * Block ads (Tor will ignore your /etc/hosts file, so [uAdblock](https://open-store.io/app/uadblock.mariogrip) is not an option).
-* Find a way to stop leaking DNS requests in the current Ubuntu Touch version.
 * Disable WebRTC.
 * Stop Tor when the app is closed.
 * Add (re-add) a search engine menu.
